@@ -1,0 +1,17 @@
+.footer-custom {
+  background-color: #0d2a45;
+}
+
+.footer-bottom-bar {
+  background-color: #0b2545;
+  padding-top: 1rem;
+}
+
+a {
+  &.text-white-50 {
+    transition: color 0.3s ease;
+    &:hover {
+      color: #fff !important;
+    }
+  }
+}

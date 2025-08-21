@@ -1,0 +1,24 @@
+<div class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold mb-4">
+      Transforme seu futuro com<br>nossos cursos profissionalizantes
+    </h1>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let course of courses">
+      <app-curso-card 
+        [courseTitle]="course.title"
+        [courseDescription]="course.description"
+        [imageUrl]="course.imageUrl">
+      </app-curso-card>
+    </div>
+  </div>
+  <div class="text-center mt-5">
+    <a routerLink="/cursos" class="btn btn-primary btn-lg rounded-pill px-5 py-3">
+      Conheça Todos os Nossos Cursos
+    </a>
+  </div>
+</div>

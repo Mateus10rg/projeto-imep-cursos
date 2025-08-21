@@ -1,0 +1,14 @@
+.card-title {
+  color: #0b2545;
+  font-weight: bold;
+}
+
+.btn-outline-primary {
+  color: #0b2545;
+  border-color: #0b2545;
+
+  &:hover {
+    background-color: #0b2545;
+    color: #fff;
+  }
+}
