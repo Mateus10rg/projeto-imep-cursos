@@ -11,10 +11,10 @@
       <div class="col-md-4 mb-4">
         <h5 class="text-white mb-3">LINKS RÁPIDOS</h5>
         <ul class="list-unstyled">
-          <li><a routerLink="/" class="text-white-50 text-decoration-none">Home</a></li>
-          <li><a routerLink="/" class="text-white-50 text-decoration-none">O IMEP</a></li>
-          <li><a routerLink="/cursos" class="text-white-50 text-decoration-none">Cursos</a></li>
-          <li><a routerLink="/contato" class="text-white-50 text-decoration-none">Contato</a></li>
+          <li><a class="nav-link text-white-50 text-decoration-none" routerLink="/">Home</a></li>
+          <li><a class="nav-link text-white-50 text-decoration-none" routerLink="/o-imep">O IMEP</a></li>
+          <li><a class="nav-link text-white-50 text-decoration-none" routerLink="/cursos">Cursos</a></li>
+          <li><a class="nav-link text-white-50 text-decoration-none" routerLink="/contato">Contato</a></li>
         </ul>
       </div>
 
@@ -23,17 +23,21 @@
         <p class="text-white-50 mb-1">Av. Comercial, 2081 - sala 102 - Centro, Brasília - DF, 71691-083</p>
 
         <h5 class="text-white mt-4 mb-3">Telefone</h5>
-        <p class="text-white-50 mb-1">(61) 99373-3542 (Whatsapp)</p>
+        <p class="text-white-50 mb-1">(61) 99373-3542
+          <a href="https://www.linkedin.com/in/mateus10rg/" class="text-white-50 text-decoration-none">(Whatsapp)</a>
+
+        </p>
 
         <h5 class="text-white mt-4 mb-3">E-mail</h5>
-        <p class="text-white-50 mb-1"><a href="mailto:email do imep" class="text-white-50 text-decoration-none">email do imep</a></p>
+        <p class="text-white-50 mb-1"><a href="mailto:email do imep" class="text-white-50 text-decoration-none">email do
+            imep</a></p>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom-bar text-center py-3">
     <p class="mb-0 text-white-50">
-      &copy; {{ currentYear }} Todos os direitos reservados. Desenvolvido por 
+      &copy; {{ currentYear }} Todos os direitos reservados. Desenvolvido por
       <a href="https://www.linkedin.com/in/mateus10rg/" class="text-white-50 text-decoration-none">Mateus Rodrigues</a>
     </p>
   </div>

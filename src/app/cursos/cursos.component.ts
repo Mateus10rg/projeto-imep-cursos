@@ -11,11 +11,11 @@ import { CursoCardComponent } from '../curso-card/curso-card.component';
 })
 export class CursosComponent {
   courses = [
-    { title: 'Desenvolvimento Web', description: 'Aprenda a criar sites modernos com HTML, CSS e JavaScript.', 
-      imageUrl: 'assets/web-dev.jpg' },
+    { title: 'Teste', description: 'Teste', 
+      imageUrl: 'assets/operador-pc.png' },
     // ... os outros cursos ...
-    { title: 'Cloud Computing', description: 'Aprenda a usar serviços de nuvem como AWS, Azure e Google Cloud.',
-      imageUrl: 'assets/cloud.jpg' },
+    { title: 'Teste', description: 'Teste',
+      imageUrl: 'assets/operador-pc.png' },
   ];
 
 
