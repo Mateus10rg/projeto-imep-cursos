@@ -1,8 +1,8 @@
-<div class="card h-100 shadow-sm border-0">
+<div class="card curso-card mb-4">
   <img [src]="imageUrl" class="card-img-top" [alt]="courseTitle">
   <div class="card-body">
     <h5 class="card-title">{{ courseTitle }}</h5>
-    <p class="card-text">{{ courseDescription }}</p>
-    <a href="#" class="btn btn-outline-primary btn-sm mt-3">Ver detalhes</a>
+    <p class="card-text text-truncate">{{ courseDescription}}</p>
+    <a [routerLink]="['/cursos', courseId]" class="btn btn-outline-success btn-sm">Saiba mais</a>
   </div>
-</div>
+</div> 

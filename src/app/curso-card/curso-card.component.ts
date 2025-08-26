@@ -1,13 +1,17 @@
+// src/app/curso-card/curso-card.component.ts
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-curso-card', // Nome do seletor é 'app-curso-card'
+  selector: 'app-curso-card',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, CommonModule],
   templateUrl: './curso-card.component.html',
-  styleUrl: './curso-card.component.scss'
+  styleUrls: ['./curso-card.component.scss']
 })
 export class CursoCardComponent {
+  @Input() courseId: number = 0; // Recebe o ID
   @Input() courseTitle: string = '';
   @Input() courseDescription: string = '';
   @Input() imageUrl: string = '';

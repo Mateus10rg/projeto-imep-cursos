@@ -1,2 +1,20 @@
-/* src/styles.scss */
+/* Você precisa ter o Bootstrap instalado: npm install bootstrap */
 @import 'bootstrap/scss/bootstrap.scss';
+
+.bg-primary-custom {
+  background-color: #0d2a45 !important;
+}
+
+.btn-success {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+}
+
+.footer-custom {
+  background-color: #0d2a45;
+}
+
+.footer-bottom-bar {
+  background-color: #0b2545;
+  padding-top: 1rem;
+}

@@ -9,5 +9,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contato.component.scss'
 })
 export class ContatoComponent {
-
 }

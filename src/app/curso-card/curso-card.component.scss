@@ -1,14 +1,27 @@
-.card-title {
-  color: #0b2545;
-  font-weight: bold;
-}
-
-.btn-outline-primary {
-  color: #0b2545;
-  border-color: #0b2545;
+.curso-card {
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
 
   &:hover {
-    background-color: #0b2545;
-    color: #fff;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .card-img-top {
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
   }
 }

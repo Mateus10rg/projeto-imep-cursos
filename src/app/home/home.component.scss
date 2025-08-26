@@ -1,22 +1,10 @@
-.hero-section {
-  height: 80vh; /* Ajuste a altura conforme a sua preferência */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-  url("/assets/home-hero.png") no-repeat center center;
-  background-size: cover;
-  display: flex; /* Para centralizar o conteúdo */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/*Conteudo principal*/
+main {
+    min-height: 500px;
 }
 
-.btn-primary {
-  background-color: #0b2545 !important;
-  border-color: #0b2545 !important;
-  font-weight: bold;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #081e33 !important;
-  }
+/*banner*/
+#section-banners img {
+    
+    height: auto;
 }

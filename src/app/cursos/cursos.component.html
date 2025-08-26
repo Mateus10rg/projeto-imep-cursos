@@ -1,11 +1,11 @@
 <div class="container my-5">
   <h1 class="text-center fw-bold mb-5">Nossos Cursos</h1>
   <div class="row g-4">
-    <div class="col-md-4" *ngFor="let course of courses">
-      <app-curso-card 
-        [courseTitle]="course.title"
-        [courseDescription]="course.description"
-        [imageUrl]="course.imageUrl">
+    <div class="col-md-4" *ngFor="let curso of cursos">
+      <app-curso-card
+        [courseId]="curso.id" [courseTitle]="curso.nome"
+        [courseDescription]="curso.resumo"
+        [imageUrl]="curso.imageUrl">
       </app-curso-card>
     </div>
   </div>

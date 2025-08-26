@@ -1,0 +1,55 @@
+<div class="container my-5" *ngIf="curso; else notFound">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="fw-bold">{{ curso.nome }}</h1>
+    <button (click)="goBack()" class="btn btn-close" aria-label="Close"></button>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-6">
+      <img [src]="curso.imageUrl" class="img-fluid rounded shadow-lg" [alt]="curso.nome">
+    </div>
+
+    <div class="col-md-6">
+      <h3 class="fw-bold border-start border-success border-4 ps-2"><b>Este curso abordará</b> </h3>
+      <p class="mt-3 justificado" style="white-space: pre-wrap;" [innerHTML]="curso.descricaoCompleta"></p>
+    </div>
+  </div>
+
+  <div class="mt-5" *ngIf="curso.fichaTecnica">
+    <h3 class="fw-bold border-start border-success border-4 ps-2">Ficha Técnica</h3>
+    <p class="mt-3 justificado" [innerHTML]="curso.fichaTecnica"></p>
+  </div>
+
+  <div class="mt-5" *ngIf="curso.objetivos">
+    <h3 class="fw-bold border-start border-success border-4 ps-2">O curso tem por objetivo</h3>
+    <p class="mt-3 justificado" [innerHTML]="curso.objetivos"></p>
+  </div>
+
+  <div class="mt-5" *ngIf="curso.conteudo && curso.conteudo.length > 0">
+    <h3 class="fw-bold title-section">
+      Conteúdo do curso
+    </h3>
+
+    <div class="mt-4">
+      <div *ngFor="let licao of curso.conteudo; let last = last">
+
+        <h5 class="fw-bold">{{ licao.titulo }}</h5>
+
+        <p class="text-muted">{{ licao.descricao }}</p>
+
+        <hr *ngIf="!last" class="my-4">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #notFound>
+  <div class="container my-5 text-center">
+    <h2 class="fw-bold">Curso não encontrado!</h2>
+    <p>O curso que você está procurando não existe.</p>
+    <a routerLink="/cursos" class="btn btn-primary">Voltar para a lista de cursos</a>
+  </div>
+</ng-template>

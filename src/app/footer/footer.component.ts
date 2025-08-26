@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

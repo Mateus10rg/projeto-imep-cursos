@@ -1,23 +1,40 @@
-<div class="hero-section text-center text-white d-flex align-items-center justify-content-center">
-  <div class="container">
-    <h1 class="display-3 fw-bold mb-4">
-      Transforme seu futuro com<br>nossos cursos profissionalizantes
-    </h1>
+<section id="section-banners" class="container">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/home-hero1.png" class="d-block w-100" alt="Venha comprar na nossa Loja">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/home-hero1.png" class="d-block w-100" alt="Promoção de produtos">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/home-hero1.png" class="d-block w-100" alt="Várias novidades de produtos">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-</div>
+</section>
 
 <div class="container my-5">
   <div class="row g-4">
-    <div class="col-md-4" *ngFor="let course of courses">
-      <app-curso-card 
-        [courseTitle]="course.title"
-        [courseDescription]="course.description"
-        [imageUrl]="course.imageUrl">
+    <div class="col-md-4" *ngFor="let curso of cursos">
+      <app-curso-card
+        [courseId]="curso.id"
+        [courseTitle]="curso.nome"
+        [courseDescription]="curso.resumo"
+        [imageUrl]="curso.imageUrl">
       </app-curso-card>
     </div>
   </div>
   <div class="text-center mt-5">
-    <a routerLink="/cursos" class="btn btn-primary btn-lg rounded-pill px-5 py-3">
+    <a routerLink="/cursos" class="btn btn-success btn-lg rounded-pill px-5 py-3">
       Conheça Todos os Nossos Cursos
     </a>
   </div>
