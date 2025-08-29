@@ -1,10 +1,69 @@
 /*Conteudo principal*/
 main {
     min-height: 500px;
+    padding: 16px;
+    top: 500px;
 }
 
-/*banner*/
+/* Banner */
+#section-banners {
+    margin-top: 70px; /* Adiciona espaço acima da seção inteira do banner */
+}
+
 #section-banners img {
-    
+    width: 100%;
     height: auto;
+}
+
+// src/app/home/home.component.scss
+
+// Estilos da seção de depoimentos
+.testimonials-section {
+  background-color: #0d2a45;
+  background-image: linear-gradient(160deg, #0d2a45 0%, #17426c 100%);
+  position: relative;
+}
+
+// Estilos para o Card do depoimento
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%; // Garante que os cards na mesma linha tenham a mesma altura
+}
+
+.quote-icon {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  font-size: 6rem;
+  color: #dc3545;
+  font-family: serif;
+  line-height: 1;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.testimonial-text {
+  flex-grow: 1; // Faz o texto crescer para alinhar os autores na base
+  margin-bottom: 1.5rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
 }

@@ -1,12 +1,12 @@
 .curso-card {
-  max-width: 300px;
-  border-radius: 16px;
+  max-width: 400px;
+  border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
 
   &:hover {
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-4px) scale(1.05);
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   }
 
@@ -16,8 +16,8 @@
   }
 
   .card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
   }
 
   .card-text {

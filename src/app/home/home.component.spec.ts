@@ -1,22 +1,45 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
-import { CursoCardComponent } from '../curso-card/curso-card.component';
+// src/app/home/home.component.spec.ts
 
-@Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, RouterLink, CursoCardComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
-})
-export class HomeComponent {
-  courses = [
-    { title: 'Desenvolvimento Web', description: 'Aprenda a criar sites modernos com HTML, CSS e JavaScript.', imageUrl: 'assets/web-dev.jpg' },
-    { title: 'Marketing Digital', description: 'Domine as estratégias para crescer seu negócio online.', imageUrl: 'assets/marketing-digital.jpg' },
-    { title: 'Gestão de Projetos', description: 'Gerencie projetos de forma ágil e eficiente.', imageUrl: 'assets/gestao-projetos.jpg' },
-    { title: 'Design Gráfico', description: 'Crie artes visuais incríveis com as principais ferramentas.', imageUrl: 'assets/design-grafico.jpg' },
-    { title: 'Análise de Dados', description: 'Transforme dados em insights valiosos para a tomada de decisões.', imageUrl: 'assets/analise-dados.jpg' },
-    { title: 'Cibersegurança', description: 'Proteja sistemas e redes contra ameaças cibernéticas.', imageUrl: 'assets/ciberseguranca.jpg' }
-  ];
-}
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; // 1. Importar o SCHEMA
+import { HomeComponent } from './home.component';
+import { CursoService } from '../services/curso.service';
+
+// Cria um "serviço dublê" para o teste não depender do serviço real
+const mockCursoService = {
+  getCursos: () => [
+    { id: 1, nome: 'Curso Teste 1', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+    { id: 2, nome: 'Curso Teste 2', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+    { id: 3, nome: 'Curso Teste 3', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+    { id: 4, nome: 'Curso Teste 4', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+    { id: 5, nome: 'Curso Teste 5', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+    { id: 6, nome: 'Curso Teste 6', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+    { id: 7, nome: 'Curso Teste 7', resumo: 'resumo', descricaoCompleta: '', imageUrl: '', categoria: ['Teste'] },
+  ]
+};
+
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HomeComponent],
+      // 2. Adicionar o SCHEMA aqui para o ambiente de teste
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [
+        // 3. Fornecer o serviço "dublê" para o teste
+        { provide: CursoService, useValue: mockCursoService }
+      ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(HomeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

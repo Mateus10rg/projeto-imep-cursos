@@ -5,3 +5,10 @@
   background-color: #4CAF50 !important;
   border-color: #4CAF50 !important;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}

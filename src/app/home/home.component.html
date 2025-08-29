@@ -22,6 +22,32 @@
   </div>
 </section>
 
+<section class="testimonials-section">
+  <div class="container py-5">
+    <h2 class="text-center text-white fw-bold mb-5">O que nossos alunos dizem</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mb-4" *ngFor="let depoimento of depoimentos">
+        <div class="testimonial-card">
+          <div class="quote-icon">”</div>
+          <div class="stars mb-3">
+            <i class="bi bi-star-fill" *ngFor="let i of [].constructor(depoimento.estrelas)"></i>
+          </div>
+          <p class="testimonial-text">{{ depoimento.texto }}</p>
+          <div class="author">
+            <img [src]="depoimento.imagemUrl" [alt]="depoimento.autor" class="author-img">
+            <div class="author-info">
+              <h5 class="mb-0">{{ depoimento.autor }}</h5>
+              <small class="text-muted">{{ depoimento.titulo }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <div class="container my-5">
   <div class="row g-4">
     <div class="col-md-4" *ngFor="let curso of cursos">

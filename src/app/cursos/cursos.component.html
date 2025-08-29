@@ -1,12 +1,35 @@
 <div class="container my-5">
   <h1 class="text-center fw-bold mb-5">Nossos Cursos</h1>
+
+  <div class="text-center mb-5">
+    <button 
+      class="btn btn-filtro" 
+      [class.active]="categoriaSelecionada === 'Todos'"
+      (click)="filtrarPorCategoria('Todos')">
+      Todos
+    </button>
+    <button 
+      *ngFor="let categoria of categorias" 
+      class="btn btn-filtro"
+      [class.active]="categoriaSelecionada === categoria"
+      (click)="filtrarPorCategoria(categoria)">
+      {{ categoria }}
+    </button>
+  </div>
   <div class="row g-4">
-    <div class="col-md-4" *ngFor="let curso of cursos">
+    <div class="col-md-4" *ngFor="let curso of cursosFiltrados">
       <app-curso-card
-        [courseId]="curso.id" [courseTitle]="curso.nome"
+        [courseId]="curso.id"
+        [courseTitle]="curso.nome"
         [courseDescription]="curso.resumo"
         [imageUrl]="curso.imageUrl">
       </app-curso-card>
     </div>
   </div>
+
+  <div *ngIf="cursosFiltrados.length === 0" class="text-center mt-5">
+    <p class="text-muted fs-4">Nenhum curso encontrado nesta categoria.</p>
+  </div>
 </div>
+
+<button id="voltar-topo" type="button" class="btn btn-outline-primary" onclick="topo()">&uarr; Voltar ao topo</button>
